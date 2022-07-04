@@ -1,0 +1,33 @@
+<template>
+    <lightning-card>
+
+        <div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-input label="Title" type="text" value={Name} name="Name" onchange={HandleChange}
+                        required>
+                    </lightning-input>
+                </p>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-input label="Description" type="textarea" value={Description} name="description"
+                        onchange={HandleChange} required></lightning-input>
+                </p>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-combobox name="Type" label="Type" value="Type" placeholder="Select type"
+                        options={options} onchange={HandleChange} required></lightning-combobox>
+                </p>
+            </div>
+            <br>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-button type="brand" label="Submit" variant="brand" size="small" onclick={submitAction}>
+                    </lightning-button>
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
